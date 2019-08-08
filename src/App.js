@@ -1,25 +1,25 @@
+/*
+ * @Author: chenjiao25322
+ * @Date: 2019-08-08 17:07:08
+ * @LastEditors: chenjiao25322
+ * @LastEditTime: 2019-08-08 17:38:18
+ * @Description: 描述信息
+ */
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Layout } from 'antd'
+
+const { Header, Content, Sider, Footer } = Layout
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout style={{ height: "100%" }}>
+      <Header style={{ background: "#fff" }}>header</Header>
+      <Layout>
+        <Sider style={{ background: "#fff" }}>right sidebar</Sider>
+        <Content>main content</Content>
+      </Layout>
+      <Footer>footer</Footer>
+    </Layout>
   );
 }
 
